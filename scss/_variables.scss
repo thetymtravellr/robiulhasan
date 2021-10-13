@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap");
+
+$header-height: 3rem;
+
+// COLORS
+$white: #fff;
+$black: #000;
+$purple: #7437ff;
+$purple-light: #8956ffc7;
+
+$text-color: #333333;
+// FONTS
+
+$font-poppins: "Poppins", sans-serif;
+
+$font-ubuntu: "Ubuntu", sans-serif;
+
+// Measurments
+
+//size
+
+$big-font-size: 2rem;
+$h1-font-size: 1.5rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1.125rem;
+$normal-font-size: 0.938rem;
+$small-font-size: 0.813rem;
+$smaller-font-size: 75rem;
+
+// weight
+
+$font-medium: 500;
+$font-semi-bold: 600;
+
+//Margin Bottom
+
+$mb-0-25: 0.25rem;
+$mb-0-5: 0.5rem;
+$mb-0-75: 0.75rem;
+$mb-1: 1rem;
+$mb-1-5: 1.5rem;
+$mb-2: 2rem;
+$mb-2-5: 2.5rem;
+$mb-3: 3rem;
+
+// Z-INDEX
+
+$z-tooltip: 10;
+$z-fixed: 100;
+$z-modal: 1000;
+
+@media screen and (min-width: 968px) {
+  $big-font-size: 3rem;
+  $h1-font-size: 2.25rem;
+  $h2-font-size: 1.5rem;
+  $h3-font-size: 1.25rem;
+  $normal-font-size: 1rem;
+  $small-font-size: 0.875rem;
+  $smaller-font-size: 0.813rem;
+}
+
+@mixin shadow {
+  -webkit-box-shadow: -1px 1px 5px -1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -1px 1px 5px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: -1px 1px 5px -1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin shadowHover {
+  -webkit-box-shadow: -1px 1px 10px -1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: -1px 1px 10px -1px rgba(0, 0, 0, 0.4);
+  box-shadow: -1px 1px 10px -1px rgba(0, 0, 0, 0.4);
+}
