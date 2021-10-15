@@ -5,6 +5,18 @@
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: #d0c7e6;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #7437ff;
+}
+
 html {
   scroll-behavior: smooth;
 }
