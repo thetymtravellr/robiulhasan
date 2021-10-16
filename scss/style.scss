@@ -24,7 +24,7 @@ body {
   font-family: $font-poppins;
   font-size: $normal-font-size;
   background-color: #fff;
-  color: $black;
+  overflow-x: hidden;
 }
 
 a {
@@ -347,12 +347,16 @@ nav {
 
       .social-box {
         margin-top: $mb-2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
 
         .about-build {
           margin-bottom: $mb-0-5;
         }
         .social-links {
           font-weight: $font-medium;
+          text-align: left;
           .social-icon {
             font-size: 1.5rem;
             color: $purple;

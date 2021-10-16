@@ -25,7 +25,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 0.938rem;
   background-color: #fff;
-  color: #000;
+  overflow-x: hidden;
 }
 
 a {
@@ -310,12 +310,16 @@ nav .toggle .line-3 {
 }
 .about-container .about-wrapper .about-text .social-box {
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .about-container .about-wrapper .about-text .social-box .about-build {
   margin-bottom: 0.5rem;
 }
 .about-container .about-wrapper .about-text .social-box .social-links {
   font-weight: 500;
+  text-align: left;
 }
 .about-container .about-wrapper .about-text .social-box .social-links .social-icon {
   font-size: 1.5rem;
