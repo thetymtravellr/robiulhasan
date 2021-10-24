@@ -399,8 +399,12 @@ nav {
 }
 
 /*==================== SCROLLUP ====================*/
+
+.form-title {
+  margin-bottom: 2rem;
+}
 .contact-wrapper {
-  max-width: 600px;
+  max-width: 800px;
   margin: auto;
   text-align: center;
   display: flex;
@@ -411,30 +415,43 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 10px;
 
     label {
       margin-bottom: $mb-0-25;
       margin-top: $mb-0-75;
     }
 
+    input {
+      text-align: center;
+    }
+
+    #email {
+      margin-bottom: 2rem;
+    }
+    [for="email"] {
+      margin-top: 2rem;
+    }
+
     input,
     textarea {
-      width: 20rem;
+      width: 30rem;
       height: 3rem;
       outline: none;
       border: none;
       border-bottom: 1px solid $purple-light;
-      text-align: center;
       font-family: $font-poppins;
-      font-size: 1.4rem;
       font-weight: $font-semi-bold;
+      font-size: 1rem;
       color: #5e5e5e;
-      transition: 0.4s ease-in-out;
+      transition: 0.2s ease-in-out;
       letter-spacing: 1px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
 
       &:focus {
-        width: 28rem;
         border-bottom: 2px solid $purple;
+        background: rgba($purple, 0.05);
       }
 
       &::placeholder {
@@ -552,6 +569,23 @@ nav {
   }
 }
 
+// SUCCESS
+
+.success {
+  background: rgb(100, 247, 125);
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+  transition: 0.2s ease-in-out;
+}
+// ERROR
+
+.error {
+  background: rgb(247, 100, 100);
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+}
 // Show Scroll
 
 .show-scroll {
@@ -629,12 +663,8 @@ nav {
     form {
       input,
       textarea {
-        width: 14rem;
-        font-size: 1rem;
-
-        &:focus {
-          width: 18rem;
-        }
+        width: 18rem;
+        font-size: 0.8rem;
       }
     }
   }

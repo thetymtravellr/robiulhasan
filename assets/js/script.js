@@ -87,7 +87,44 @@ navslide();
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/ 
+/*==================== CONTACT ====================*/ 
+const myForm = document.querySelector('#myForm');
+const contactName = document.querySelector('#name');
+const contactEmail = document.querySelector('#email');
+const contactMessage = document.querySelector('#message');
+const submitBtn = document.querySelector('.submit-btn');
+const msg = document.querySelector('.msg');
+
+
+
+
+const onSubmit = (e) => {
+    e.preventDefault();
+
+    if(contactName.value === '' || contactEmail.value === '' || contactMessage.value === '') {
+        msg.classList.add('error');
+        msg.innerHTML = 'Please Input Fields';
+        myForm.classList.add('form-error');
+
+        setTimeout(() => {
+            msg.classList.remove('error');
+            msg.innerHTML = '';
+            myForm.classList.remove('form-error');
+        }, 3000);
+    } else {
+        msg.classList.add('success');
+        msg.innerHTML = 'Thank You!';
+
+        setTimeout(() => {
+            msg.remove();
+        }, 3000);
+    }
+}
+    
+
+myForm.addEventListener('submit', onSubmit);
+
+
 
 
 /*==================== SHOW SCROLL UP ====================*/ 

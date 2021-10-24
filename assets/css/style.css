@@ -353,8 +353,12 @@ nav .toggle .line-3 {
 }
 
 /*==================== SCROLLUP ====================*/
+.form-title {
+  margin-bottom: 2rem;
+}
+
 .contact-wrapper {
-  max-width: 600px;
+  max-width: 800px;
   margin: auto;
   text-align: center;
   display: flex;
@@ -365,30 +369,41 @@ nav .toggle .line-3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 10px;
 }
 .contact-wrapper form label {
   margin-bottom: 0.25rem;
   margin-top: 0.75rem;
 }
+.contact-wrapper form input {
+  text-align: center;
+}
+.contact-wrapper form #email {
+  margin-bottom: 2rem;
+}
+.contact-wrapper form [for=email] {
+  margin-top: 2rem;
+}
 .contact-wrapper form input,
 .contact-wrapper form textarea {
-  width: 20rem;
+  width: 30rem;
   height: 3rem;
   outline: none;
   border: none;
   border-bottom: 1px solid #8956ffc7;
-  text-align: center;
   font-family: "Poppins", sans-serif;
-  font-size: 1.4rem;
   font-weight: 600;
+  font-size: 1rem;
   color: #5e5e5e;
-  transition: 0.4s ease-in-out;
+  transition: 0.2s ease-in-out;
   letter-spacing: 1px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .contact-wrapper form input:focus,
 .contact-wrapper form textarea:focus {
-  width: 28rem;
   border-bottom: 2px solid #7437ff;
+  background: rgba(116, 55, 255, 0.05);
 }
 .contact-wrapper form input::placeholder,
 .contact-wrapper form textarea::placeholder {
@@ -494,6 +509,21 @@ nav .toggle .line-3 {
   font-size: 1.5rem;
 }
 
+.success {
+  background: #64f77d;
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+  transition: 0.2s ease-in-out;
+}
+
+.error {
+  background: #f76464;
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+}
+
 .show-scroll {
   bottom: 5rem;
 }
@@ -558,12 +588,8 @@ nav .toggle .line-3 {
 
   .contact-wrapper form input,
 .contact-wrapper form textarea {
-    width: 14rem;
-    font-size: 1rem;
-  }
-  .contact-wrapper form input:focus,
-.contact-wrapper form textarea:focus {
     width: 18rem;
+    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 1024px) {

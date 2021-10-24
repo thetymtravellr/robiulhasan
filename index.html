@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="/assets/image/arrow.svg"
+      href="/assets/image/favicon/favicon.ico"
       type="image/x-icon"
     />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -32,7 +32,12 @@
     />
     <meta name="twitter:image" content="https://i.imgur.com/bbOSYxQ.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="apple-touch-icon" href="assets/image/logo.png" />
+    <link
+      rel="apple-touch-icon"
+      href="assets/image/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/assets/image/favicon/site.webmanifest" />
+
     <title>Robiul Hasan | Developer</title>
 
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -55,11 +60,11 @@
       </div>
       <ul class="nav">
         <li class="nav-item"><a href="#hero">Home</a></li>
-        <li class="nav-item"><a href="#hero">Projects</a></li>
-        <li class="nav-item"><a href="#hero">About</a></li>
-        <li class="nav-item"><a href="#hero">Skills</a></li>
-        <li class="nav-item"><a href="#hero">Tools</a></li>
-        <li class="nav-item"><a href="#hero">Contact</a></li>
+        <li class="nav-item"><a href="#projects">Projects</a></li>
+        <li class="nav-item"><a href="#about">About</a></li>
+        <li class="nav-item"><a href="#skills">Skills</a></li>
+        <li class="nav-item"><a href="#tools">Tools</a></li>
+        <li class="nav-item"><a href="#contact">Contact</a></li>
       </ul>
       <div class="burger">
         <div class="line-1"></div>
@@ -368,7 +373,7 @@
         </div>
       </section>
       <!--==================== TOOLS ====================-->
-      <section class="skills section" id="skills">
+      <section class="skills section" id="tools">
         <h2 class="section-title">Tools</h2>
         <span class="section-subtitle"> Tools That I Use In my projects </span>
 
@@ -426,19 +431,14 @@
       <!--==================== CONTACT ====================-->
 
       <section class="contact section" id="contact">
-        <h2 class="section-title">Get Started</h2>
+        <h2 class="section-title form-title">Get Started</h2>
 
         <div class="contact-container container">
           <div class="contact-wrapper">
-            <form action="" method="post">
+            <form action="" id="myForm" class="myForm">
+              <div class="msg"></div>
               <label for="name">Name : </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Name"
-                required
-              />
+              <input type="text" name="name" id="name" placeholder="Name" />
 
               <label for="email">E-Mail :</label>
               <input
@@ -446,7 +446,6 @@
                 name="email"
                 id="email"
                 placeholder="E-Mail"
-                required
               />
 
               <label for="message">Your Message :</label>
@@ -454,10 +453,9 @@
                 name="message"
                 id="message"
                 placeholder="Message"
-                required
               ></textarea>
 
-              <button type="submit">
+              <button type="submit" class="submit-btn">
                 <i class="uil uil-message"></i>
               </button>
             </form>
