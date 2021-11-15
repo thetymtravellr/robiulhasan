@@ -116,71 +116,141 @@ img {
 
 /*==================== NAV ====================*/
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 8vh;
+header {
+  padding: 1rem;
 
-  .logo {
-    a {
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .logo {
       color: rgb(134, 133, 133);
       font-weight: $font-medium;
       font-size: 1.2rem;
+      z-index: 100;
 
       &:hover {
         color: $purple;
       }
-
       span {
-        color: #000;
-      }
-    }
-  }
-
-  .nav {
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
-
-    a {
-      font-weight: $font-medium;
-      position: relative;
-
-      &:hover {
         color: $purple;
-        transition: 0.3s;
+      }
+    }
+
+    .nav {
+      a {
+        margin: 0 10px;
+        font-family: $font-poppins;
+        font-weight: $font-medium;
+
+        &:hover {
+          &:hover {
+            color: $purple;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+
+    .hamburger {
+      position: relative;
+      display: block;
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      z-index: 100;
+
+      appearance: none;
+      border: none;
+      background: none;
+      outline: none;
+
+      .bar,
+      &:after,
+      &:before {
+        content: "";
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: $purple;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+
+      &.active {
+        &::before {
+          transform: rotate(-45deg) translate(-8px, 6px);
+        }
+        &::after {
+          transform: rotate(45deg) translate(-8px, -7px);
+        }
+        .bar {
+          transform: translateX(-30px);
+          opacity: 0;
+        }
       }
     }
   }
+}
 
-  .burger {
+@media screen and (min-width: 768px) {
+  header {
+    .nav-container {
+      .hamburger {
+        display: none;
+      }
+    }
+  }
+  .mobile-view {
     display: none;
-    div {
-      width: 30px;
-      height: 2px;
-      background-color: rgb(107, 106, 106);
-      margin: 5px;
-      transition: transform 0.3s ease;
-      border-radius: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    .nav-container {
+      justify-content: space-between;
+      .nav {
+        display: none;
+      }
+    }
+  }
+}
+
+.mobile-view {
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  background-color: #fff;
+  padding-top: 5rem;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  transition: 0.4s;
+
+  a {
+    display: block;
+    color: $purple;
+    font-weight: $font-medium;
+    text-align: center;
+    padding: 16px 12px;
+    background: rgb(238, 237, 237);
+    margin: 10px auto 16px;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 6px;
+    transition: 0.4s;
+
+    &:hover {
+      background: rgba($purple, 0.8);
+      color: #fff;
     }
   }
 
-  .toggle {
-    div {
-      background-color: $purple;
-    }
-    .line-1 {
-      transform: rotate(-45deg) translate(-5px, 5px);
-    }
-
-    .line-2 {
-      opacity: 0;
-    }
-
-    .line-3 {
-      transform: rotate(45deg) translate(-5px, -5px);
-    }
+  &.active {
+    left: 0;
   }
 }
 /*==================== HERO ====================*/
