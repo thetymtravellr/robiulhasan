@@ -21,7 +21,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: $font-poppins;
+  font-family: $font-fira;
   font-size: $normal-font-size;
   background-color: #fff;
   overflow-x: hidden;
@@ -45,6 +45,9 @@ img {
   height: auto;
 }
 
+p {
+  font-family: $font-poppins;
+}
 /*==================== REUSABLE CSS CLASSES ====================*/
 
 .section {
@@ -598,7 +601,7 @@ header {
         margin-right: 1rem;
         margin-left: 1rem;
         font-size: 1.4rem;
-        padding: 0.7rem 1rem;
+        padding: 0.8rem 1rem;
         background: #7337ff21;
         color: $purple-light;
         border-radius: 50%;
