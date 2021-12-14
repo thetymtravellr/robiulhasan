@@ -121,6 +121,10 @@ p {
 
 header {
   padding: 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: $white;
 
   .nav-container {
     display: flex;
@@ -145,7 +149,7 @@ header {
       a {
         margin: 0 10px;
         font-family: $font-poppins;
-        font-weight: $font-medium;
+        font-weight: 600;
 
         &:hover {
           &:hover {
@@ -174,7 +178,7 @@ header {
       &:before {
         content: "";
         display: block;
-        height: 4px;
+        height: 3px;
         width: 100%;
         border-radius: 10px;
         background-color: $purple;
@@ -187,7 +191,7 @@ header {
           transform: rotate(-45deg) translate(-8px, 6px);
         }
         &::after {
-          transform: rotate(45deg) translate(-8px, -7px);
+          transform: rotate(45deg) translate(-7px, -6px);
         }
         .bar {
           transform: translateX(-30px);
@@ -257,73 +261,74 @@ header {
   }
 }
 /*==================== HERO ====================*/
+#hero {
+  .hero-container {
+    gap: 1rem;
+    max-width: 768px;
 
-.hero-container {
-  gap: 1rem;
-  max-width: 768px;
+    .hero-content {
+      grid-template-columns: 0.5fr 3fr;
+      padding-top: 3.5rem;
+      align-items: center;
 
-  .hero-content {
-    grid-template-columns: 0.5fr 3fr;
-    padding-top: 3.5rem;
-    align-items: center;
+      .hero-social {
+        display: grid;
+        grid-template-columns: max-content;
+        row-gap: 1rem;
 
-    .hero-social {
-      display: grid;
-      grid-template-columns: max-content;
-      row-gap: 1rem;
+        .hero-social-icon {
+          font-size: 1.25rem;
+          color: $purple;
+          transition: 0.4s ease-in-out;
 
-      .hero-social-icon {
-        font-size: 1.25rem;
-        color: $purple;
-        transition: 0.4s ease-in-out;
-
-        &:hover {
-          color: $purple-light;
+          &:hover {
+            color: $purple-light;
+          }
         }
       }
     }
-  }
 
-  .hero-data {
-    .hero-title {
-      font-size: $big-font-size;
-    }
-    .hero-subtitle {
-      font-size: $h3-font-size;
-      color: $text-color;
-      font-weight: $font-medium;
-      margin-bottom: $mb-0-75;
-    }
-
-    .hero-description {
-      margin-bottom: $mb-2;
-    }
-  }
-
-  .hero-scroll {
-    display: none;
-
-    &-button {
-      color: $purple;
-      transition: 0.3s;
-
-      &:hover {
-        transform: translateY(0.25rem);
+    .hero-data {
+      .hero-title {
+        font-size: $big-font-size;
       }
-
-      .hero-scroll-mouse {
-        font-size: 2rem;
-      }
-
-      .home-scroll-name {
-        font-size: $small-font-size;
+      .hero-subtitle {
+        font-size: $h3-font-size;
         color: $text-color;
         font-weight: $font-medium;
-        margin-right: $mb-0-25;
+        margin-bottom: $mb-0-75;
       }
 
-      .home-arrow-scroll {
-        font-size: 1.25rem;
+      .hero-description {
+        margin-bottom: $mb-2;
+      }
+    }
+
+    .hero-scroll {
+      display: none;
+
+      &-button {
+        color: $purple;
+        transition: 0.3s;
+
+        &:hover {
+          transform: translateY(0.25rem);
+        }
+
+        .hero-scroll-mouse {
+          font-size: 2rem;
+        }
+
+        .home-scroll-name {
+          font-size: $small-font-size;
+          color: $text-color;
+          font-weight: $font-medium;
+          margin-right: $mb-0-25;
+        }
+
+        .home-arrow-scroll {
+          font-size: 1.25rem;
+        }
       }
     }
   }

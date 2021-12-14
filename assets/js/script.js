@@ -1,29 +1,40 @@
 'use strict';
+// Variables
+const mobileView = document.querySelector('.mobile-view');
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelectorAll('.nav-links');
+const body = document.querySelector('body');
 
 // // MENU SHOW AND HIDE
-const mobileView = document.querySelector('.mobile-view');
+function navSlide() {
+    hamburger.classList.toggle('active');
+    mobileView.classList.toggle('active');
 
-const navSlide = () => {
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('.nav');
-    
-    const body = document.querySelector('body');
-
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        mobileView.classList.toggle('active');
-
-        if(hamburger.classList.contains('active')) {
-            body.style.overflowY = `hidden`;
-        } else {
-            body.style.overflowY = `auto`;
-        }
-    })
+    if(hamburger.classList.contains('active')) {
+        body.style.overflowY = `hidden`;
+    } else {
+        body.style.overflowY = `unset`;
+    }
 }
 
-navSlide();
+function navClose() {
 
-console.log(mobileView);
+    hamburger.classList.toggle('active');
+    mobileView.classList.toggle('active');
+
+    if(hamburger.classList.contains('active')) {
+        body.style.overflowY = `hidden`;
+    } else {
+        body.style.overflowY = `unset`;
+    }
+    console.log('IM Working');
+    
+}
+
+hamburger.addEventListener('click', navSlide);
+navLinks.forEach(e => {
+    e.addEventListener('click', navClose);
+});
 
 // /*==================== ACCORDION SKILLS ====================*/
 // const skillsContent = document.getElementsByClassName('skills-content'),
@@ -127,4 +138,4 @@ function scrollUp() {
     else scrollUp.classList.remove('show-scroll');
 }
 
-window.addEventListener('scroll', scrollUp)
+window.addEventListener('scroll', scrollUp);
