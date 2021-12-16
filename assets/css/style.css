@@ -540,13 +540,13 @@ header .nav-container .hamburger.active .bar {
   margin-left: 1rem;
   font-size: 1.4rem;
   padding: 0.8rem 1rem;
-  background: #7337ff21;
-  color: #8956ffc7;
+  background: rgba(116, 55, 255, 0.9);
+  color: #fff;
   border-radius: 50%;
   transition: 0.3s ease;
 }
 .footer-container .footer-wrapper .links-container .footer-links:hover {
-  background: #7337ff38;
+  background: #7437ff;
 }
 .footer-container .footer-wrapper a {
   padding-bottom: 2rem;

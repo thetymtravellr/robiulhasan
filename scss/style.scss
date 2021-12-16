@@ -607,13 +607,13 @@ header {
         margin-left: 1rem;
         font-size: 1.4rem;
         padding: 0.8rem 1rem;
-        background: #7337ff21;
-        color: $purple-light;
+        background: rgba($purple, 0.9);
+        color: $white;
         border-radius: 50%;
         transition: 0.3s ease;
 
         &:hover {
-          background: #7337ff38;
+          background: $purple;
         }
       }
     }
