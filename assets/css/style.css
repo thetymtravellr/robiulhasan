@@ -165,21 +165,30 @@ header .nav-container .hamburger .bar, header .nav-container .hamburger:after, h
   content: "";
   display: block;
   height: 3px;
-  width: 100%;
-  border-radius: 10px;
+  border-radius: 0 0 0 0/50% 50% 50% 50px;
   background-color: #7437ff;
   margin: 6px 0;
   transition: 0.4s;
 }
+header .nav-container .hamburger:before {
+  width: 50%;
+}
+header .nav-container .hamburger:after {
+  width: 75%;
+}
+header .nav-container .hamburger .bar {
+  width: 100%;
+}
 header .nav-container .hamburger.active::before {
-  transform: rotate(-45deg) translate(-8px, 6px);
+  transform: rotate(45deg) translate(4px, 16px);
+  opacity: 0;
 }
 header .nav-container .hamburger.active::after {
-  transform: rotate(45deg) translate(-7px, -6px);
+  transform: rotate(45deg) translate(1px, 10px);
+  width: 100%;
 }
 header .nav-container .hamburger.active .bar {
-  transform: translateX(-30px);
-  opacity: 0;
+  transform: rotate(-45deg) translate(-1rem, 6px);
 }
 
 @media screen and (min-width: 768px) {
