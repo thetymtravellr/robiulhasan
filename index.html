@@ -154,12 +154,15 @@
           <div class="projects-wrapper">
             <div class="projects-box">
               <img
-                src="https://images.unsplash.com/photo-1605245871292-ea12ecbac076?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                src="https://firebasestorage.googleapis.com/v0/b/thetymtravellr.appspot.com/o/for-portfolio%2FProject-1.png?alt=media&token=5fe7b5d5-657e-4577-8df4-92568f1ea2c0"
                 alt=""
                 class="projects-thumbnail"
               />
-              <p class="projects-details">Lorem ipsum dolor sit.</p>
-              <a href="#" class="projects-visit"
+              <p class="projects-details">Blogr Landing Page.</p>
+              <a
+                href="https://blogr-landing-page-chi.vercel.app/"
+                class="projects-visit"
+                target="_blank"
                 >Preview Site
                 <i class="uil uil-arrow-right visit-icon"></i>
               </a>
@@ -466,16 +469,15 @@
 
         <div class="contact-container container">
           <div class="contact-wrapper">
-            <form action="" id="myForm" class="myForm">
-              <div class="msg"></div>
+            <form id="contactForm" class="myForm">
               <label for="name">Name : </label>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="name" id="name" required />
 
               <label for="email">E-Mail :</label>
-              <input type="email" name="email" id="email" />
+              <input type="email" name="email" id="email" required />
 
               <label for="message">Your Message :</label>
-              <textarea name="message" id="message"></textarea>
+              <textarea name="message" id="message"></textarea required>
 
               <button type="submit" class="submit-btn">
                 <i class="uil uil-message"></i>
@@ -527,7 +529,7 @@
     <script src=""></script>
 
     <!--==================== MAIN JS ====================-->
-
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

@@ -122,6 +122,7 @@ header {
   width: 100%;
   z-index: 100;
   background-color: #fff;
+  box-shadow: 2px 4px 16px #ececec;
 }
 header .nav-container {
   display: flex;
@@ -326,6 +327,7 @@ header .nav-container .hamburger.active .bar {
 }
 .projects-container .projects-wrapper .projects-box .projects-thumbnail {
   object-fit: cover;
+  min-height: 200px;
 }
 .projects-container .projects-wrapper .projects-box .projects-details {
   font-size: 1.15rem;

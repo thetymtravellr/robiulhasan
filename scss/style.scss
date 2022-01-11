@@ -125,6 +125,7 @@ header {
   width: 100%;
   z-index: 100;
   background-color: $white;
+  box-shadow: 2px 4px 16px rgb(236, 236, 236);
 
   .nav-container {
     display: flex;
@@ -367,6 +368,7 @@ header {
 
       .projects-thumbnail {
         object-fit: cover;
+        min-height: 200px;
       }
 
       .projects-details {

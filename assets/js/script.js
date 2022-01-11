@@ -90,6 +90,7 @@ navLinks.forEach(e => {
 
 
 /*==================== CONTACT ====================*/ 
+/*
 const myForm = document.querySelector('#myForm');
 const contactName = document.querySelector('#name');
 const contactEmail = document.querySelector('#email');
@@ -126,8 +127,80 @@ const onSubmit = (e) => {
 
 myForm.addEventListener('submit', onSubmit);
 
+*/
+
+  // Import the functions you need from the SDKs you need
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyDlXIAcdi3WEPcV4eofroA_KltjtfzVmv0",
+    authDomain: "thetymtravellr.firebaseapp.com",
+    databaseURL: "https://thetymtravellr-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "thetymtravellr",
+    storageBucket: "thetymtravellr.appspot.com",
+    messagingSenderId: "9740195479",
+  };
+  firebase.initializeApp(config);
+  
+  // Reference messages collection
+  var messagesRef = firebase.database().ref('messages');
+  
+  // Listen for form submit
+  document.getElementById('contactForm').addEventListener('submit', submitForm);
+  
+  // Submit form
+  function submitForm(e){
+    e.preventDefault();
+  
+    //Get value
+    let name = getInputVal('name');
+    let email = getInputVal('email');
+    let message = getInputVal('message');
+  
+    // Save message
+    saveMessage(name, email, message);
+  
+    // Show alert
+    document.querySelector('.alert').style.display = 'block';
+  
+    // Hide alert after 3 seconds
+    setTimeout(function(){
+      document.querySelector('.alert').style.display = 'none';
+    },3000);
+  
+    // Clear form
+    document.getElementById('contactForm').reset();
+  }
+  
+  // Function to get form value
+  function getInputVal(id){
+    return document.getElementById(id).value;
+  }
+  
+  // Save message to firebase
+  function saveMessage(name, email, message){
+    let newMessageRef = messagesRef.push();
+    newMessageRef.set({
+      name: name,
+      email: email,
+      message: message
+    });
+  }
+  
 
 /*==================== SHOW SCROLL UP ====================*/ 
 
