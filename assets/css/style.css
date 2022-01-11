@@ -459,7 +459,7 @@ ul {
 #contactForm {
   display: grid;
   grid-gap: 20px;
-  grid-template-areas: "name" "email" "company" "phone" "message";
+  grid-template-areas: "name" "email" "message";
 }
 
 .required-field {
