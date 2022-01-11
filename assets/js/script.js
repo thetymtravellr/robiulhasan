@@ -144,6 +144,8 @@ myForm.addEventListener('submit', onSubmit);
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-analytics.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js";
 
 // Initialize Firebase
 var config = {
@@ -200,7 +202,9 @@ var config = {
       message: message
     });
   }
-  
+    // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 
 /*==================== SHOW SCROLL UP ====================*/ 
 
