@@ -489,104 +489,204 @@ header {
 
 /*==================== SCROLLUP ====================*/
 
-.form-title {
-  margin-bottom: 2rem;
+.contact-container {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
 }
-.contact-wrapper {
-  max-width: 800px;
-  margin: auto;
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.title {
+  margin-bottom: 30px;
+  font-family: "Mukta Mahee", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
   text-align: center;
-  display: flex;
-  justify-content: center;
+}
 
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+.wrapper {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 27.5px;
+}
 
-    label {
-      margin-bottom: $mb-0-25;
-      margin-top: $mb-0-75;
-    }
+#contactForm {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "name"
+    "email"
+    "company"
+    "phone"
+    "message";
+}
 
-    input {
-      text-align: center;
-    }
+.required-field {
+  grid-column: 1 / 2;
+}
 
-    #email {
-      margin-bottom: 2rem;
-    }
-    [for="email"] {
-      margin-top: 2rem;
-    }
+.submit-button {
+  grid-column: 2 / 3;
+}
 
-    input,
-    textarea {
-      width: 30rem;
-      height: 3rem;
-      outline: none;
-      border: none;
-      border-bottom: 1px solid $purple-light;
-      font-family: $font-poppins;
-      font-weight: $font-semi-bold;
-      font-size: 1rem;
-      color: #5e5e5e;
-      transition: 0.2s ease-in-out;
-      letter-spacing: 1px;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
+.name-field {
+  grid-area: name;
+  grid-column: 1 / 3;
+}
 
-      &:focus {
-        border-bottom: 2px solid $purple;
-        background: rgba($purple, 0.05);
-      }
+.email-field {
+  grid-area: email;
+  grid-column: 1 / 3;
+}
 
-      &::placeholder {
-        text-align: center;
-        font-size: 1rem;
-        font-family: $font-poppins;
-        opacity: 0.2;
-      }
-    }
-    textarea {
-      height: 8rem;
-      padding: 1rem;
+.company-field {
+  grid-area: company;
+  grid-column: 1 / 3;
+}
 
-      &::-webkit-scrollbar {
-        width: 0.2rem;
-        padding: 0.5rem 0;
-      }
-      &::-webkit-scrollbar-thumb {
-        background: $purple-light;
-      }
-      &::-webkit-scrollbar-track {
-        border-radius: 10px;
-        margin-bottom: 0.5rem;
-      }
-    }
+.phone-field {
+  grid-area: phone;
+  grid-column: 1 / 3;
+}
 
-    [type="submit"] {
-      padding: 0.5rem 4rem;
-      margin: 3rem auto;
-      background: none;
-      border: 2px solid $purple;
-      border-radius: 5px;
-      color: $purple;
-      font-family: $font-poppins;
-      font-size: 1.5rem;
-      font-weight: $font-semi-bold;
+.message-field {
+  grid-area: message;
+  grid-column: 1 / 3;
+}
 
-      transition: 0.4s ease-in-out;
+/* FORM STYLES */
 
-      &:hover {
-        background: $purple;
-        color: $white;
-      }
-    }
+.contact-us {
+  margin: 0 0 30px;
+  font-family: "Mukta Mahee", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #5dc3f2;
+}
+
+.contact form {
+  border: 0;
+}
+
+.contact form label {
+  display: block;
+}
+
+.contact form p {
+  margin: 0;
+  font-family: "Mukta Mahee", sans-serif;
+  font-weight: 200;
+  font-size: 12px;
+  color: rgba(74, 86, 96, 1);
+}
+
+.contact form input,
+.contact form textarea {
+  font-family: "Mukta Mahee", sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  width: 100%;
+  padding: 0.4em 0.8em;
+  background: rgba(249, 250, 250, 0.5);
+  border: 1px solid rgba(74, 86, 96, 0.1);
+  border-radius: 2.5px;
+  outline-color: #5dc3f2;
+}
+
+.contact form button {
+  font-family: "Mukta Mahee", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+  background: #5dc3f2;
+  width: 90px;
+  height: 30px;
+  border: 0;
+  border-radius: 15px;
+}
+
+.submit-button {
+  align-self: center;
+  justify-self: end;
+}
+
+.contact form button:hover,
+.contact form button:focus {
+  background: #49b0e7;
+  color: #fff;
+  outline: 0;
+  transition: background-color 0.3s ease-out;
+}
+
+.required-field {
+  font-family: "Mukta Mahee", sans-serif;
+  font-weight: 200;
+  font-size: 10px;
+  color: rgba(74, 86, 96, 0.75);
+  align-self: center;
+  justify-self: start;
+}
+
+span {
+  color: #5dc3f2;
+}
+
+.alert {
+  margin-bottom: 1em;
+  padding: 10px;
+  background: #49b0e7;
+  font-family: "Mukta Mahee", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  border-radius: 2.5px;
+  display: none;
+}
+
+/* LARGE SCREENS */
+
+@media (min-width: 500px) {
+  #contactForm {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "name company"
+      "email phone"
+      "message message";
+  }
+
+  .name-field {
+    grid-area: name;
+    grid-column: 1 / 2;
+  }
+
+  .email-field {
+    grid-area: email;
+    grid-column: 1 / 2;
+  }
+
+  .company-field {
+    grid-area: company;
+    grid-column: 2 / 3;
+  }
+
+  .phone-field {
+    grid-area: phone;
+    grid-column: 2 / 3;
+  }
+
+  .message-field {
+    grid-area: message;
+    grid-column: 1 / 3;
   }
 }
+
 /*==================== FOOTER ====================*/
 .footer-container {
   position: relative;
