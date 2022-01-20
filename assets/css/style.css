@@ -498,10 +498,9 @@ ul {
 /* FORM STYLES */
 .contact-us {
   margin: 0 0 30px;
-  font-family: "Mukta Mahee", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  color: #5dc3f2;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #7437ff;
 }
 
 .contact form {
@@ -514,7 +513,6 @@ ul {
 
 .contact form p {
   margin: 0;
-  font-family: "Mukta Mahee", sans-serif;
   font-weight: 200;
   font-size: 12px;
   color: #4a5660;
@@ -522,7 +520,6 @@ ul {
 
 .contact form input,
 .contact form textarea {
-  font-family: "Mukta Mahee", sans-serif;
   font-weight: 200;
   font-size: 14px;
   width: 100%;
@@ -530,19 +527,19 @@ ul {
   background: rgba(249, 250, 250, 0.5);
   border: 1px solid rgba(74, 86, 96, 0.1);
   border-radius: 2.5px;
-  outline-color: #5dc3f2;
+  outline-color: #7437ff;
 }
 
 .contact form button {
-  font-family: "Mukta Mahee", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 1rem;
   color: #fff;
-  background: #5dc3f2;
+  background: rgba(116, 55, 255, 0.8);
   width: 90px;
   height: 30px;
   border: 0;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .submit-button {
@@ -552,14 +549,13 @@ ul {
 
 .contact form button:hover,
 .contact form button:focus {
-  background: #49b0e7;
+  background: #7437ff;
   color: #fff;
   outline: 0;
   transition: background-color 0.3s ease-out;
 }
 
 .required-field {
-  font-family: "Mukta Mahee", sans-serif;
   font-weight: 200;
   font-size: 10px;
   color: rgba(74, 86, 96, 0.75);
@@ -567,15 +563,14 @@ ul {
   justify-self: start;
 }
 
-span {
-  color: #5dc3f2;
+.star {
+  color: red;
 }
 
 .alert {
   margin-bottom: 1em;
   padding: 10px;
-  background: #49b0e7;
-  font-family: "Mukta Mahee", sans-serif;
+  background: #7437ff;
   font-size: 14px;
   text-align: center;
   color: #fff;
@@ -616,48 +611,29 @@ span {
   }
 }
 /*==================== FOOTER ====================*/
-.footer-container {
-  position: relative;
-  margin-top: 10rem;
-  width: 100%;
-  height: 50vh;
+footer {
+  background: #222;
+  height: 40vh;
 }
-.footer-container::before {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 80%;
-  background: rgba(141, 37, 238, 0.151);
-  left: 50%;
-  transform: translateX(-50%);
-}
-.footer-container .footer-wrapper {
-  height: inherit;
-  text-align: center;
-}
-.footer-container .footer-wrapper .links-container {
+footer .footer-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   height: 100%;
 }
-.footer-container .footer-wrapper .links-container .footer-links {
-  margin-right: 1rem;
+footer .footer-wrapper .footer-links {
   margin-left: 1rem;
-  font-size: 1.4rem;
+  font-size: 1.75rem;
   padding: 0.8rem 1rem;
-  background: rgba(116, 55, 255, 0.9);
   color: #fff;
-  border-radius: 50%;
-  transition: 0.3s ease;
+  border-radius: 5px;
 }
-.footer-container .footer-wrapper .links-container .footer-links:hover {
-  background: #7437ff;
+footer .footer-wrapper .footer-links .uil-twitter {
+  color: #1d9bf0;
 }
-.footer-container .footer-wrapper a {
-  padding-bottom: 2rem;
-  color: #7337ff96;
+footer .footer-wrapper .footer-links .uil-linkedin {
+  color: #0a66c2;
 }
 
 /*==================== SCROLLUP ====================*/
@@ -667,7 +643,7 @@ span {
   bottom: -5rem;
   background-color: #7437ff;
   opacity: 0.8;
-  padding: 0 0.3rem;
+  padding: 0.3rem;
   border-radius: 0.4rem;
   z-index: 10;
   transition: all 0.4s;

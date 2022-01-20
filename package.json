@@ -12,6 +12,7 @@
     "sass": "^1.42.1"
   },
   "dependencies": {
-    "autoprefixer": "^10.3.7"
+    "autoprefixer": "^10.3.7",
+    "firebase": "^9.6.2"
   }
 }

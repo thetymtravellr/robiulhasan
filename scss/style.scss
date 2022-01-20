@@ -563,10 +563,9 @@ ul {
 
 .contact-us {
   margin: 0 0 30px;
-  font-family: "Mukta Mahee", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  color: #5dc3f2;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: $purple;
 }
 
 .contact form {
@@ -579,7 +578,6 @@ ul {
 
 .contact form p {
   margin: 0;
-  font-family: "Mukta Mahee", sans-serif;
   font-weight: 200;
   font-size: 12px;
   color: rgba(74, 86, 96, 1);
@@ -587,7 +585,6 @@ ul {
 
 .contact form input,
 .contact form textarea {
-  font-family: "Mukta Mahee", sans-serif;
   font-weight: 200;
   font-size: 14px;
   width: 100%;
@@ -595,19 +592,19 @@ ul {
   background: rgba(249, 250, 250, 0.5);
   border: 1px solid rgba(74, 86, 96, 0.1);
   border-radius: 2.5px;
-  outline-color: #5dc3f2;
+  outline-color: $purple;
 }
 
 .contact form button {
-  font-family: "Mukta Mahee", sans-serif;
+  font-family: $font-poppins;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 1rem;
   color: #fff;
-  background: #5dc3f2;
+  background: rgba($purple, 0.8);
   width: 90px;
   height: 30px;
   border: 0;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .submit-button {
@@ -617,14 +614,13 @@ ul {
 
 .contact form button:hover,
 .contact form button:focus {
-  background: #49b0e7;
+  background: $purple;
   color: #fff;
   outline: 0;
   transition: background-color 0.3s ease-out;
 }
 
 .required-field {
-  font-family: "Mukta Mahee", sans-serif;
   font-weight: 200;
   font-size: 10px;
   color: rgba(74, 86, 96, 0.75);
@@ -632,15 +628,14 @@ ul {
   justify-self: start;
 }
 
-span {
-  color: #5dc3f2;
+.star {
+  color: red;
 }
 
 .alert {
   margin-bottom: 1em;
   padding: 10px;
-  background: #49b0e7;
-  font-family: "Mukta Mahee", sans-serif;
+  background: $purple;
   font-size: 14px;
   text-align: center;
   color: #fff;
@@ -686,49 +681,30 @@ span {
 }
 
 /*==================== FOOTER ====================*/
-.footer-container {
-  position: relative;
-  margin-top: 10rem;
-  width: 100%;
-  height: 50vh;
-
-  &::before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 80%;
-    background: rgba(141, 37, 238, 0.151);
-    left: 50%;
-    transform: translateX(-50%);
-  }
+footer {
+  background: $secondary-black;
+  height: 40vh;
 
   .footer-wrapper {
-    height: inherit;
-    text-align: center;
-    .links-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      height: 100%;
-      .footer-links {
-        margin-right: 1rem;
-        margin-left: 1rem;
-        font-size: 1.4rem;
-        padding: 0.8rem 1rem;
-        background: rgba($purple, 0.9);
-        color: $white;
-        border-radius: 50%;
-        transition: 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
 
-        &:hover {
-          background: $purple;
-        }
+    .footer-links {
+      margin-left: 1rem;
+      font-size: 1.75rem;
+      padding: 0.8rem 1rem;
+      color: $white;
+      border-radius: 5px;
+
+      .uil-twitter {
+        color: rgb(29, 155, 240);
       }
-    }
-    a {
-      padding-bottom: 2rem;
-      color: #7337ff96;
+      .uil-linkedin {
+        color: rgb(10, 102, 194);
+      }
     }
   }
 }
@@ -741,7 +717,7 @@ span {
   bottom: -5rem;
   background-color: $purple;
   opacity: 0.8;
-  padding: 0 0.3rem;
+  padding: 0.3rem;
   border-radius: 0.4rem;
   z-index: $z-tooltip;
   transition: all 0.4s;

@@ -129,83 +129,7 @@ myForm.addEventListener('submit', onSubmit);
 
 */
 
-  // Import the functions you need from the SDKs you need
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-
-
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-analytics.js";
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js";
-
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyDlXIAcdi3WEPcV4eofroA_KltjtfzVmv0",
-    authDomain: "thetymtravellr.firebaseapp.com",
-    databaseURL: "https://thetymtravellr-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "thetymtravellr",
-    storageBucket: "thetymtravellr.appspot.com",
-    messagingSenderId: "9740195479",
-  };
-  firebase.initializeApp(config);
-  
-  // Reference messages collection
-  var messagesRef = firebase.database().ref('messages');
-  
-  // Listen for form submit
-  document.getElementById('contactForm').addEventListener('submit', submitForm);
-  
-  // Submit form
-  function submitForm(e){
-    e.preventDefault();
-  
-    //Get value
-    let name = getInputVal('name');
-    let email = getInputVal('email');
-    let message = getInputVal('message');
-  
-    // Save message
-    saveMessage(name, email, message);
-  
-    // Show alert
-    document.querySelector('.alert').style.display = 'block';
-  
-    // Hide alert after 3 seconds
-    setTimeout(function(){
-      document.querySelector('.alert').style.display = 'none';
-    },3000);
-  
-    // Clear form
-    document.getElementById('contactForm').reset();
-  }
-  
-  // Function to get form value
-  function getInputVal(id){
-    return document.getElementById(id).value;
-  }
-  
-  // Save message to firebase
-  function saveMessage(name, email, message){
-    let newMessageRef = messagesRef.push();
-    newMessageRef.set({
-      name: name,
-      email: email,
-      message: message
-    });
-  }
-    // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-
+ 
 /*==================== SHOW SCROLL UP ====================*/ 
 
 function scrollUp() {
@@ -216,3 +140,33 @@ function scrollUp() {
 }
 
 window.addEventListener('scroll', scrollUp);
+
+
+
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+   
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+
+
