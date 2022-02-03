@@ -127,118 +127,20 @@ header {
 header .nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-}
-header .nav-container .logo {
-  color: #868585;
-  font-weight: 500;
-  font-size: 1.2rem;
-  z-index: 100;
-}
-header .nav-container .logo:hover {
-  color: #7437ff;
-}
-header .nav-container .logo span {
-  color: #7437ff;
+  justify-content: space-between;
 }
 header .nav-container .nav a {
   margin: 0 10px;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
 }
-header .nav-container .nav a:hover:hover {
+header .nav-container .nav a i {
+  font-size: 2rem;
+  display: none;
+}
+header .nav-container .nav a:hover {
   color: #7437ff;
   transition: 0.3s;
-}
-header .nav-container .hamburger {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  width: 35px;
-  height: 35px;
-  z-index: 100;
-  appearance: none;
-  border: none;
-  background: none;
-  outline: none;
-}
-header .nav-container .hamburger .bar, header .nav-container .hamburger:after, header .nav-container .hamburger:before {
-  content: "";
-  display: block;
-  height: 3px;
-  border-radius: 0 0 0 0/50% 50% 50% 50px;
-  background-color: #7437ff;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-header .nav-container .hamburger:before {
-  width: 50%;
-}
-header .nav-container .hamburger:after {
-  width: 75%;
-}
-header .nav-container .hamburger .bar {
-  width: 100%;
-}
-header .nav-container .hamburger.active::before {
-  transform: rotate(45deg) translate(4px, 16px);
-  opacity: 0;
-}
-header .nav-container .hamburger.active::after {
-  transform: rotate(45deg) translate(1px, 10px);
-  width: 100%;
-}
-header .nav-container .hamburger.active .bar {
-  transform: rotate(-45deg) translate(-1rem, 6px);
-}
-
-@media screen and (min-width: 768px) {
-  header .nav-container .hamburger {
-    display: none;
-  }
-
-  .mobile-view {
-    display: none;
-  }
-}
-@media screen and (max-width: 767px) {
-  header .nav-container {
-    justify-content: space-between;
-  }
-  header .nav-container .nav {
-    display: none;
-  }
-}
-.mobile-view {
-  width: 100%;
-  min-height: 100vh;
-  display: block;
-  background-color: #fff;
-  padding-top: 5rem;
-  position: fixed;
-  top: 0;
-  left: 100%;
-  transition: 0.4s;
-}
-.mobile-view a {
-  display: block;
-  color: #7437ff;
-  font-weight: 500;
-  text-align: center;
-  padding: 16px 12px;
-  background: #eeeded;
-  margin: 10px auto 16px;
-  width: 100%;
-  max-width: 200px;
-  border-radius: 6px;
-  transition: 0.4s;
-}
-.mobile-view a:hover {
-  background: rgba(116, 55, 255, 0.8);
-  color: #fff;
-}
-.mobile-view.active {
-  left: 0;
 }
 
 /*==================== HERO ====================*/
@@ -687,42 +589,23 @@ footer .footer-wrapper .footer-links .uil-linkedin {
   }
 }
 @media screen and (max-width: 767px) {
-  nav {
-    justify-content: space-between;
-    padding: 2rem 1.5rem;
+  header {
+    top: unset;
+    bottom: 0;
   }
-  nav .nav {
-    position: absolute;
-    right: 0;
-    height: 92vh;
-    top: 10%;
-    background-color: #fff;
-    color: #000;
+  header .nav-container .logo {
+    display: none;
+  }
+  header .nav-container .nav {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
     width: 100%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease;
   }
-  nav .nav .nav-item {
-    opacity: 0;
+  header .nav-container .nav a span {
+    display: none;
   }
-  nav .burger {
+  header .nav-container .nav a i {
     display: block;
-  }
-  nav .nav-active {
-    transform: translateX(0%);
-  }
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
   }
 
   .hero-content {
@@ -737,12 +620,6 @@ footer .footer-wrapper .footer-links .uil-linkedin {
 .contact-wrapper form textarea {
     width: 18rem;
     font-size: 0.8rem;
-  }
-}
-@media screen and (max-width: 1024px) {
-  nav .nav .nav-item {
-    margin-left: 10px;
-    margin-right: 10px;
   }
 }
 @media screen and (min-width: 768px) {

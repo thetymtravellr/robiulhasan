@@ -1,41 +1,48 @@
 'use strict';
 // Variables
 const mobileView = document.querySelector('.mobile-view');
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelectorAll('.nav-links');
+const hamburger = document.querySelector('.hamburger-menu');
+
 const body = document.querySelector('body');
 
 // // MENU SHOW AND HIDE
-function navSlide() {
-    hamburger.classList.toggle('active');
-    mobileView.classList.toggle('active');
+// function navSlide() {
+//     hamburger.classList.toggle('active');
+//     mobileView.classList.toggle('active');
 
-    if(hamburger.classList.contains('active')) {
-        body.style.overflowY = `hidden`;
-    } else {
-        body.style.overflowY = `unset`;
-    }
-}
+//     if(hamburger.classList.contains('active')) {
+//         body.style.overflowY = `hidden`;
+//     } else {
+//         body.style.overflowY = `unset`;
+//     }
+// }
 
-function navClose() {
+// function navClose() {
 
-    hamburger.classList.toggle('active');
-    mobileView.classList.toggle('active');
+//     hamburger.classList.toggle('active');
+//     mobileView.classList.toggle('active');
 
-    if(hamburger.classList.contains('active')) {
-        body.style.overflowY = `hidden`;
-    } else {
-        body.style.overflowY = `unset`;
-    }
+//     if(hamburger.classList.contains('active')) {
+//         body.style.overflowY = `hidden`;
+//     } else {
+//         body.style.overflowY = `unset`;
+//     }
     
+// // }
+const navLinks = document.querySelectorAll('.nav-links');
+
+function navOpenClose() {
+    hamburger.classList.toggle('active');
+    mobileView.classList.toggle('active');
 }
 
+function navLinksClickEvent() {
+    hamburger.classList.toggle('active');
+    mobileView.classList.toggle('active');
+}
 
-hamburger.addEventListener('click', navSlide);
-navLinks.forEach(e => {
-    e.addEventListener('click', navClose);
-});
-
+hamburger.addEventListener('click', navOpenClose);
+navLinks.addEventListener('click', navLinksClickEvent)
 
 // SCROLL UP FUNCTION
 function scrollUp() {
